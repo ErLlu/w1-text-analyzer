@@ -1,6 +1,7 @@
 import { countParagraphs } from "../index.js";
 
 const zeroParagraphs = "";
+
 if (countParagraphs(zeroParagraphs) === 0) {
   console.log("Todo ok");
 } else {
@@ -8,6 +9,7 @@ if (countParagraphs(zeroParagraphs) === 0) {
 }
 
 const oneWordTest = "1";
+
 if (countParagraphs(oneWordTest) === 1) {
   console.log("Todo ok");
 } else {

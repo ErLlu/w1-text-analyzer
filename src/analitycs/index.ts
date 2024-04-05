@@ -8,6 +8,6 @@ export const countParagraphs = (text: string): number => {
 };
 
 export const countWords = (text: string): number => {
-  const words = text.split(" ");
+  const words = text.trim().split(" ");
   return words.length;
 };
