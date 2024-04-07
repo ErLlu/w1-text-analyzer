@@ -147,4 +147,5 @@ export const analyzeText = (text: string): void => {
   renderParagraphsTotal(countParagraphs(text));
   renderWordsTotal(countWords(text));
   renderCharactersTotal(countCharacters(text));
+  renderShortWordsTotal(getShortWords(text));
 };
