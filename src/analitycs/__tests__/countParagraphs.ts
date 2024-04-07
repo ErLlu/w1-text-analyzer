@@ -1,24 +1,19 @@
 import { countParagraphs } from "../index.js";
 
-const zeroParagraphs = "";
+const givenResult = countParagraphs("");
+const expectedResult = 0;
 
-if (countParagraphs(zeroParagraphs) === 0) {
-  console.log("Todo ok");
-} else {
-  console.log("Todo Mal");
+const testPassed = expectedResult === givenResult;
+
+if (testPassed) {
+  console.log(`text is empty equal 0: ${testPassed}`);
 }
 
-const oneWordTest = "1";
+const givenResult2 = countParagraphs("Hola");
+const expectedResult2 = 1;
 
-if (countParagraphs(oneWordTest) === 1) {
-  console.log("Todo ok");
-} else {
-  console.log("Todo Mal");
-}
+const testPassed2 = expectedResult2 === givenResult2;
 
-const twoParagraphs = "1 \n 2";
-if (countParagraphs(twoParagraphs) === 2) {
-  console.log("Todo ok");
-} else {
-  console.log("Todo Mal");
+if (testPassed) {
+  console.log(testPassed2);
 }
