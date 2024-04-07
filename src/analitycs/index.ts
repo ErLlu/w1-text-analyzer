@@ -1,6 +1,6 @@
 export const countParagraphs = (text: string): number => {
   const isEmptyText = (text: string): boolean => {
-    return text.trim() === "";
+    return text === "";
   };
   if (isEmptyText(text)) {
     return 0;
@@ -11,8 +11,12 @@ export const countParagraphs = (text: string): number => {
 };
 
 export const countWords = (text: string): number => {
-  const words = text.trim().split(" ");
-  return words.length;
+  const isEmptyText = (text: string): boolean => {
+    return text === "";
+  };
+  const words = text.trim().split(/[\s\n]+/);
+  const totalWords = words.filter((word) => !isEmptyText(word));
+  return totalWords.length;
 };
 
 export const countCharacters = (text: string): number => {
