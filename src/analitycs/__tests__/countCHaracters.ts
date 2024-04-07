@@ -1,4 +1,4 @@
-import { countParagraphs as countCharacters } from "../index.js";
+import { countCharacters } from "../index.js";
 
 const givenResult = countCharacters("");
 const result = 0;
