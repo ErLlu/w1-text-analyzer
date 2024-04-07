@@ -1,5 +1,7 @@
 export const countParagraphs = (text: string): number => {
-  const isEmptyText = " ";
+  const isEmptyText = (text: string): boolean => {
+    return text.trim() === "";
+  };
   if (isEmptyText(text)) {
     return 0;
   }
@@ -14,7 +16,10 @@ export const countWords = (text: string): number => {
 };
 
 export const countCharacters = (text: string): number => {
-  if (text === "" || text === undefined || text === null) {
+  const isEmptyText = (text: string): boolean => {
+    return text === "";
+  };
+  if (isEmptyText(text)) {
     return 0;
   }
   const characters = text.concat();
