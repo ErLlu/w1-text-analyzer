@@ -1,7 +1,8 @@
-import { countWords } from "../index.js";
-const zeroWords = "";
-if (countWords(zeroWords) === 0) {
-  console.log("Todo ok");
-} else {
-  console.log("Todo Mal");
-}
+import { countParagraphs as countWords } from "../index.js";
+
+const givenResult = countWords("Palabra");
+const expectedResult = 1;
+
+const testPassed = expectedResult === givenResult;
+
+console.log(testPassed);
